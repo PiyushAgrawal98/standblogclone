@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-module-banner',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./module-banner.component.css']
 })
 export class ModuleBannerComponent implements OnInit {
-
+@Input() pagetitle:string;
+@Input() subheading:string;
   constructor() { }
 
   ngOnInit(): void {

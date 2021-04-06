@@ -1,12 +1,12 @@
 <div>
-    <div class="h-24 bg-gray-50 w-full flex justify-between px-48 items-center shadow-sm ">
-        <div class=" h-14 cursor-pointer uppercase text-2xl font-bold ">stand blog<span class="text-red-400 text-4xl ">.</span></div>
+    <div class="h-24 bg-gray-50 w-full flex justify-between px-48 items-center shadow-sm fixed">
+        <div class=" h-14 cursor-pointer uppercase text-2xl font-bold outline-none" routerLink="../home">stand blog<span class="text-red-400 text-4xl ">.</span></div>
         <div class="flex space-x-12 uppercase text-lg font-semibold items-center">
-            <div class="text-red-500  cursor-pointer font-bold text-base">home</div>
-            <div class="hover:text-red-500  cursor-pointer font-bold text-base">about us</div>
-            <div class="hover:text-red-500  cursor-pointer font-bold text-base">blog entries</div>
-            <div class="hover:text-red-500  cursor-pointer font-bold text-base">post details</div>
-            <div class="hover:text-red-500 cursor-pointer font-bold text-base">contact us</div>
+            <div class="hover:text-primary outline-none  cursor-pointer font-bold text-base  "  routerLink="../home" routerLinkActive="active text-primary"> home</div>
+            <div class="hover:text-primary outline-none cursor-pointer font-bold text-base active:bg-red-500"  routerLink="../about-us" routerLinkActive="active text-primary">about us</div>
+            <div class="hover:text-primary outline-none  cursor-pointer font-bold text-base" routerLink="../blog-entries" routerLinkActive="active text-primary">blog entries</div>
+            <div class="hover:text-primary outline-none cursor-pointer font-bold text-base" routerLink="../post-details" routerLinkActive="active text-primary">post details</div>
+            <div class="hover:text-primary outline-none cursor-pointer font-bold text-base" routerLink="../contact-us" routerLinkActive="active text-primary">contact us</div>
         </div>
 
     </div>

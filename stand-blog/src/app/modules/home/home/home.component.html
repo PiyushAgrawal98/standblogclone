@@ -1,1 +1,79 @@
-<p>home works!</p>
+<div class="   flex  pt-24 ">
+    <div class="">
+        <app-carousel image="/assets/banner-item-01.jpg" admin="Admin" date="May 12,2020  " comments="12 comments">
+            <h1> fashion</h1>
+            <p>Donec porttitor augue at velit</p>
+        </app-carousel>
+    </div>
+    <div>
+        <app-carousel image="/assets/banner-item-02.jpg" admin="Admin" date="May 14,2020  " comments="24 comments">
+            <h1> fashion</h1>
+            <p>Donec porttitor augue at velit</p>
+        </app-carousel>
+    </div>
+    <div>
+        <app-carousel image="/assets/banner-item-03.jpg" admin="Admin  " date="May 16,2020  " comments="36 comments">
+            <h1> fashion</h1>
+            <p>Best HTML Templates on TemplateMo</p>
+
+        </app-carousel>
+    </div>
+</div>
+
+<div class="">
+    <app-template-banner></app-template-banner>
+</div>
+
+<!-- blog post and recent post  start -->
+<div class=" flex  justify-center py-10 ">
+    <!-- blog post start -->
+    <div class="w-6/12  space-y-6 ">
+        <div>
+            <app-post image="/assets/blog-post-01.jpg" title="lifestyle"
+                titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
+                comments="12 Comments"
+                blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
+                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
+        </div>
+
+        <div>
+            <app-post image="/assets/blog-post-02.jpg" title="lifestyle"
+                titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
+                comments="12 Comments"
+                blogdescrption="You can support us by contributing a little via PayPal. Please contact TemplateMo via Live Chat or Email. If you have any question or feedback about this template, feel free to talk to us. Also, you may check other CSS templates such as multi-page, resume, video, etc."
+                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
+        </div>
+
+        <div>
+            <app-post image="/assets/blog-post-03.jpg" title="lifestyle"
+                titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
+                comments="12 Comments"
+                blogdescrption="Nullam at quam ut lacus aliquam tempor vel sed ipsum. Donec pellentesque tincidunt imperdiet. Mauris sit amet justo vulputate, cursus massa congue, vestibulum odio. Aenean elit nunc, gravida in erat sit amet, feugiat viverra leo. Phasellus interdum, diam commodo egestas rhoncus, turpis nisi consectetur nibh, in vehicula eros orci vel neque."
+                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
+        </div>
+        <div class="pb-20 pt-5">
+            <div class="bg-secondary uppercase flex
+            justify-center items-center text-white text-sm h-14 font-bold  ">view all post</div>
+        </div>
+    </div>
+
+    <!-- blog post end -->
+
+    <!-- recent post start -->
+
+
+    <div class="   ">
+        <div>
+            <app-recent-post></app-recent-post>
+            <app-categories></app-categories>
+            <app-tag-cloud></app-tag-cloud>
+        </div>
+
+    </div>
+    <!-- recent post end -->
+
+</div>
+<!--blog post and recent post  end  -->
+<div>
+    <app-footer></app-footer>
+</div>

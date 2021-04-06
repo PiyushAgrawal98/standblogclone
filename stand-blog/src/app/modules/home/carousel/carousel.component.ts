@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -6,9 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
+  // @Input() title:string;
+  // @Input() description:string;
+  @Input() image:string;
+  @Input() admin:string;
+  @Input()  date :string;
+  @Input() comments:string;
+  
 
+
+
+  image1='/assets/banner-item-01.jpg';
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

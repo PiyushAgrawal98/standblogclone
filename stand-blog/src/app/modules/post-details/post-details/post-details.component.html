@@ -1,1 +1,51 @@
-<p>post-details works!</p>
+<div class="pt-28">
+    <app-module-banner pagetitle="post details" subheading="SINGLE BLOG POST"></app-module-banner>
+</div>
+<div>
+    <app-template-banner></app-template-banner>
+</div>
+
+
+<div class="flex justify-center  ">
+<div class="flex flex-col items-center  justify-center w-6/12 ">
+    <app-post image="/assets/blog-post-02.jpg" title="lifestyle" titleDescription="Aenean Pulvinar Gravida Sem Nec"
+        admin="Admin" date="May 12,2020" comments="10 Comments"
+        blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
+        template1="Beauty" template2="Nature"></app-post>
+        <div class="pb-20">
+            <app-comments></app-comments>
+        <div >
+            <app-comment authordescription="Fusce ornare mollis eros. Duis et diam vitae justo fringilla condimentum eu quis leo. Vestibulum id turpis porttitor sapien facilisis scelerisque. Curabitur a nisl eu lacus convallis eleifend posuere id tellus." authorname="Charles Kate"
+            date="May 20, 2020" image="/assets/comment-author-01.jpg"></app-comment>
+           
+        </div>
+        <div class="pl-32">
+            <app-comment authordescription="In porta urna sed venenatis sollicitudin. Praesent urna sem, pulvinar vel mattis eget." authorname="Thirteen Man"
+            date="May 16, 2020" image="/assets/comment-author-02.jpg" ></app-comment>
+        </div>
+        <div>
+            <app-comment authordescription="Nullam nec pharetra nibh. Cras tortor nulla, faucibus id tincidunt in, ultrices eget ligula. Sed vitae suscipit ligula. Vestibulum id turpis volutpat, lobortis turpis ac, molestie nibh."
+            date="May 16, 2020" authorname="Belisimo Mama" image="/assets/comment-author-03.jpg">
+            
+        
+        </app-comment>
+           
+        </div>
+        <div class="pl-32">
+            <app-comment authordescription="In porta urna sed venenatis sollicitudin. Praesent urna sem, pulvinar vel mattis eget." authorname="Thirteen Man"
+            date="May 22, 2020" image="/assets/comment-author-02.jpg" ></app-comment>
+        </div>
+    </div>
+    </div>
+    
+    <div class="flex flex-col">
+        <app-recent-post></app-recent-post>
+        <app-categories></app-categories>
+        <app-tag-cloud></app-tag-cloud>
+    </div>
+    
+</div>
+
+
+
+<app-footer></app-footer>

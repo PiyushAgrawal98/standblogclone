@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+// import{ HttpModule} from '@angular/http';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+// import{FormsModule} from '@angular/forms';
+
+
 import { CarouselComponent } from './modules/home/carousel/carousel.component';
 import { HeaderComponent } from './modules/core/header/header.component';
 import { FooterComponent } from './modules/core/footer/footer.component';
@@ -28,7 +35,12 @@ import { BlogEntriesComponent } from './modules/blog-entries/blog-entries/blog-e
 import { CoreComponent } from './modules/core/core/core.component';
 import { HomeComponent } from './modules/home/home/home.component';
 import { PostDetailsComponent } from './modules/post-details/post-details/post-details.component';
+import { PageNotFoundComponent } from './modules/core/page-not-found/page-not-found.component';
+import { HardikComponent } from './hardik/hardik/hardik.component';
 
+
+
+const routes: Routes = [];
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,10 +69,18 @@ import { PostDetailsComponent } from './modules/post-details/post-details/post-d
     BlogEntriesComponent,
     CoreComponent,
     HomeComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    PageNotFoundComponent,
+    HardikComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    // HttpModule,
+    // NgbModule,
+    // FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
