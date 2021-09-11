@@ -1,15 +1,13 @@
 
 <div class="flex flex-col items-end w-96  space-y-10">
-    <div class=" ">
-        <input class="uppercase outline-none text-xs font-semibold p-2 border-2 w-80  h-12" type="text" name="" id="" placeholder="Type to serach...">
-    </div>
-    <div class="py-3  w-80 space-y-4">
-        <div class="text-xl border-b h-10 text-black font-bold uppercase  ">recent posts</div>
-        <div class="text-lg font-bold  text-black ">Vestibulum id turpis porttitor sapien facilisis scelerisque</div>
-        <div class="text-gray-400 border-b  h-10">May 31, 2020</div>
-        <div class="text-lg font-bold  text-black ">Suspendisse et metus nec libero ultrices varius eget in risus</div>
+    
+    <div class="  w-80 space-y-4">
+        <!-- <div class="text-xl border-b h-10 text-black font-bold uppercase  ">recent posts</div> -->
+        <div class="text-lg font-bold  text-black hover:text-primary cursor-pointer duration-300 "><ng-content select="[headline]"></ng-content></div>
+        <div class="text-gray-400 border-b  h-10"><ng-content select="[date]"></ng-content></div>
+        <!-- <div class="text-lg font-bold  text-black ">Suspendisse et metus nec libero ultrices varius eget in risus</div>
         <div class="text-gray-400 border-b  h-10">May 28, 2020</div>
         <div class="text-lg font-bold  text-black ">Swag hella echo park leggings, shaman cornhole ethical coloring</div>
-        <div class="text-gray-400 border-b  h-10">May 14, 2020</div>
+        <div class="text-gray-400 border-b  h-10">May 14, 2020</div> -->
     </div>
 </div>

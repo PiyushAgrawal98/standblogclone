@@ -28,32 +28,65 @@
 <div class=" flex  justify-center py-10 ">
     <!-- blog post start -->
     <div class="w-6/12  space-y-6 ">
-        <div>
-            <app-post image="/assets/blog-post-01.jpg" title="lifestyle"
-                titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
-                comments="12 Comments"
-                blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
-                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
+        <div *ngFor="let item of homedata" class="" >
+            <app-post >
+                <img [src]="item.image" alt="">
+                <div title>{{item.title}}</div>
+                <div titleDescription>{{item.subTitle}}</div>
+                <div admin>{{item.author}}</div>
+                <div date>{{item.publishedDate}}</div>
+                <div comments>{{item.comments}}</div>
+                <div blogdescrption>{{item.content}}</div>
+                <div template1>{{item.tag[0]}}</div>
+                <div template2>{{item.tag[1]}}</div>
+                <div socialhandle1>{{item.tag2[0]}}</div>
+                <div socialhandle2>{{item.tag2[0]}}</div>
+            </app-post>
         </div>
 
-        <div>
-            <app-post image="/assets/blog-post-02.jpg" title="lifestyle"
-                titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
-                comments="12 Comments"
-                blogdescrption="You can support us by contributing a little via PayPal. Please contact TemplateMo via Live Chat or Email. If you have any question or feedback about this template, feel free to talk to us. Also, you may check other CSS templates such as multi-page, resume, video, etc."
-                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
-        </div>
+        <!-- <div>
+            <app-post image="/assets/blog-post-02.jpg">
+            
+                <div title>HEALTHY</div>
+                <div titleDescription>Best Template Website For HTML CSS</div>
+                <div admin>Admin</div>
+                <div date>May 24,2020</div>
+                <div comments>16 comments</div>
+                <div blogdescrption>You can support us by contributing a little via PayPal. Please contact TemplateMo via Live Chat or Email. If you have any question or feedback about this template, feel free to talk to us. Also, you may check other CSS templates such as multi-page, resume, video, etc.</div>
+                <div template1>Beauty</div>
+                <div template2>Templates</div>
+                <div socialhandle1>Facebook</div>
+                <div socialhandle2>Twitter</div>
+            
+            
+            
+            </app-post>
+        </div> -->
 
-        <div>
+        <!-- <div>
             <app-post image="/assets/blog-post-03.jpg" title="lifestyle"
                 titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
                 comments="12 Comments"
                 blogdescrption="Nullam at quam ut lacus aliquam tempor vel sed ipsum. Donec pellentesque tincidunt imperdiet. Mauris sit amet justo vulputate, cursus massa congue, vestibulum odio. Aenean elit nunc, gravida in erat sit amet, feugiat viverra leo. Phasellus interdum, diam commodo egestas rhoncus, turpis nisi consectetur nibh, in vehicula eros orci vel neque."
-                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter"></app-post>
-        </div>
+                template1="Beauty" template2="Nature" socialhandle1="Facebook" socialhandle2="Twitter">
+
+                <div title>fashion</div>
+                <div titleDescription>Best Template Website For HTML CSS</div>
+                <div admin>Admin</div>
+                <div date>May 24,2020</div>
+                <div comments>16 comments</div>
+                <div blogdescrption>Nullam at quam ut lacus aliquam tempor vel sed ipsum. Donec pellentesque tincidunt imperdiet. Mauris sit amet justo vulputate, cursus massa congue, vestibulum odio. Aenean elit nunc, gravida in erat sit amet, feugiat viverra leo. Phasellus interdum, diam commodo egestas rhoncus, turpis nisi consectetur nibh, in vehicula eros orci vel neque.</div>
+                <div template1>HTML CSS</div>
+                <div template2>Photoshop</div>
+                <div socialhandle1>Facebook</div>
+                <div socialhandle2>Twitter</div>
+            
+            
+            </app-post>
+        </div> -->
         <div class="pb-20 pt-5">
             <div class="bg-secondary uppercase flex
-            justify-center items-center text-white text-sm h-14 font-bold  ">view all post</div>
+            justify-center items-center text-white text-sm h-14 font-bold cursor-pointer">view all post</div>
         </div>
     </div>
 
@@ -63,8 +96,16 @@
 
 
     <div class="   ">
-        <div>
-            <app-recent-post></app-recent-post>
+        <div class="flex flex-col items-end w-96  space-y-4">
+            <div class="flex flex-col items-end w-96   ">
+                <input class="uppercase outline-none text-xs font-semibold p-2 border-2 w-80  h-12" type="text" name="" id="" placeholder="Type to serach...">
+            </div>
+            <div class="text-xl border-b h-10 text-black font-bold uppercase py-3  w-80    ">recent posts</div>
+            <app-recent-post *ngFor="let item of recentPost">
+               
+                <div headline>{{item.headline}}</div>
+                <div date>{{item.date}}</div>
+            </app-recent-post>
             <app-categories></app-categories>
             <app-tag-cloud></app-tag-cloud>
         </div>

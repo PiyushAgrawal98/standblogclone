@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -6,17 +6,24 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Input() title:String;
-  @Input() titleDescription:string;
-  @Input() admin:string;
-  @Input() date:string;
-  @Input() comments:string;
-  @Input() blogdescrption:string;
-  @Input() template1:string;
-  @Input() template2:string;
-  @Input() socialhandle1:string;
-  @Input() socialhandle2:String;
-  @Input() image:string;
+  // @Input() title:String;
+  // @Input() titleDescription:string;
+  // @Input() admin:string;
+  // @Input() date:string;
+  // @Input() comments:string;
+  // @Input() blogdescrption:string;
+  // @Input() template1:string;
+  // @Input() template2:string;
+  // @Input() socialhandle1:string;
+  // @Input() socialhandle2:String;
+  // @Input() image:string;
+
+  @Input() indexelement:number;
+  @Output() deleteEvent = new EventEmitter();
+
+  deletePost(){
+    this.deleteEvent.emit(this.indexelement);
+  }
 
 
   constructor() { }

@@ -2,12 +2,107 @@
     <app-module-banner pagetitle="recent post" subheading="OUR RECENT BLOG ENTRIES"></app-module-banner>
 </div>
 <div>
-<app-template-banner></app-template-banner>
+    <app-template-banner></app-template-banner>
 </div>
 
 <div class="flex justify-center pb-20 ">
-    <div class="w-6/12  flex flex-col space-y-7 ">
-    <div class="flex    space-x-7 ">
+    <div class="  w-6/12 ">
+        <div class=" grid grid-cols-2">
+            <app-post class="pb-5 px-3"  *ngFor="let item of blogPost ; let i=index;" [indexelement]="i" (deleteEvent)="deleteEvent($event)" >
+                <img [src]="item.image" alt="">
+                <div title>{{item.title}}</div>
+                <div titleDescription>{{item.subTitle}}</div>
+                <div admin>{{item.author}}</div>
+                <div date>{{item.publishedDate}}</div>
+                <div comments>{{item.comments}}</div>
+                <div blogdescrption>{{item.content}}</div>
+                <div template1 class="uppercase">{{item.tag}}</div>
+                <div button>Delete</div>
+            </app-post>
+        </div>
+
+        
+    </div>
+    
+    <div class="flex flex-col items-end w-96  space-y-4">
+        <div class="   ">
+            <input class="uppercase outline-none text-xs font-semibold p-2 border-2 w-80  h-12" type="text" name="headline" id="" placeholder="Type to serach..." [(ngModel)]="headline" (ngModelChange)="search()">
+        </div>
+        <div class="text-xl border-b h-10 text-black font-bold uppercase py-3  w-80 ">recent posts</div>
+        <app-recent-post *ngFor="let item of recentPost"> 
+            <div headline>{{item.headline}}</div>
+            <div date>{{item.date}}</div>
+        </app-recent-post>
+        <app-categories></app-categories>
+        <app-tag-cloud></app-tag-cloud>
+    </div>
+</div>
+<div class=" border-8 px-56 ">
+<div class="  w-6/12  border-2 flex justify-center items-center  space-x-4">
+    <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary">1</div>
+    <div
+        class="h-12 bg-secondary text-white w-14 border flex justify-center items-center cursor-pointer hover:text-primary">
+        2</div>
+    <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary">3</div>
+    <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary ">>></div>
+</div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div class="flex    space-x-7 ">
         <app-post image="/assets/blog-thumb-01.jpg" title="lifestyle"
         titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
         comments="12 Comments"
@@ -19,8 +114,8 @@
                 comments="12 Comments"
                 blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
                 template1="Beauty" template2="Nature" ></app-post>
-    </div>
-    <div class="flex    space-x-7 ">
+    </div> -->
+        <!-- <div class="flex    space-x-7 ">
         <app-post image="/assets/blog-thumb-03.jpg" title="lifestyle"
         titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
         comments="12 Comments"
@@ -32,8 +127,8 @@
                 comments="12 Comments"
                 blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
                 template1="Beauty" template2="Nature"></app-post>
-    </div>
-    <div class="flex    space-x-7 ">
+    </div> -->
+        <!-- <div class="flex    space-x-7 ">
         <app-post image="/assets/blog-thumb-05.jpg" title="lifestyle"
         titleDescription="Best Template Website For HTML CSS" admin="Admin" date="May 31,2020"
         comments="12 Comments"
@@ -45,19 +140,4 @@
                 comments="12 Comments"
                 blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
                 template1="Beauty" template2="Nature" ></app-post>
-    </div>
-    <div class="flex justify-center space-x-4">
-        <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary">1</div>
-        <div class="h-12 bg-secondary text-white w-14 border flex justify-center items-center cursor-pointer hover:text-primary">2</div>
-        <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary">3</div>
-        <div class="h-12 w-14 border flex justify-center items-center cursor-pointer hover:text-primary ">>></div>
-    </div>
-</div> 
-<div class="flex flex-col">
-<app-recent-post></app-recent-post>
-<app-categories></app-categories>
-<app-tag-cloud></app-tag-cloud>
-</div>
-</div>
-
-<app-footer></app-footer>
+    </div> -->

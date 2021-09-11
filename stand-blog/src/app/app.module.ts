@@ -6,7 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 // import{ HttpModule} from '@angular/http';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-// import{FormsModule} from '@angular/forms';
+import{FormsModule} from '@angular/forms';
+
+import{HttpClientModule} from '@angular/common/http';
 
 
 import { CarouselComponent } from './modules/home/carousel/carousel.component';
@@ -37,6 +39,7 @@ import { HomeComponent } from './modules/home/home/home.component';
 import { PostDetailsComponent } from './modules/post-details/post-details/post-details.component';
 import { PageNotFoundComponent } from './modules/core/page-not-found/page-not-found.component';
 import { HardikComponent } from './hardik/hardik/hardik.component';
+import { HomeBlogPostComponent } from './modules/home/home-blog-post/home-blog-post.component';
 
 
 
@@ -71,15 +74,17 @@ const routes: Routes = [];
     HomeComponent,
     PostDetailsComponent,
     PageNotFoundComponent,
-    HardikComponent
+    HardikComponent,
+    HomeBlogPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
     // HttpModule,
     // NgbModule,
-    // FormsModule
+    FormsModule
     
   ],
   providers: [],

@@ -8,10 +8,19 @@
 
 <div class="flex justify-center  ">
 <div class="flex flex-col items-center  justify-center w-6/12 ">
-    <app-post image="/assets/blog-post-02.jpg" title="lifestyle" titleDescription="Aenean Pulvinar Gravida Sem Nec"
-        admin="Admin" date="May 12,2020" comments="10 Comments"
-        blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
-        template1="Beauty" template2="Nature"></app-post>
+    <div  *ngFor="let item of postData">
+        <app-post image="/assets/blog-post-02.jpg"   >
+      <div title>{{item.title}}</div>
+      <div titleDescription>{{item.subTitle}}</div>
+      <div admin>{{item.author}}</div>
+      <div date>{{item.publishedDate}}</div>
+      <div comments>{{item.comments}}</div>
+      <div blogdescrption>{{item.content}}</div>
+      <div class="py-5" blogdescrption>{{item.content}}</div>
+      <div template1>{{item.tag}}</div>
+      <div socialhandle1>{{item.tag2}}</div>
+        </app-post>
+    </div> 
         <div class="pb-20">
             <app-comments></app-comments>
         <div >
@@ -49,3 +58,29 @@
 
 
 <app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-post image="/assets/blog-post-02.jpg" title="lifestyle" titleDescription="Aenean Pulvinar Gravida Sem Nec"
+admin="Admin" date="May 12,2020" comments="10 Comments"
+blogdescrption="Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. Contact TemplateMo for more info. Thank you."
+template1="Beauty" template2="Nature"></app-post> -->
